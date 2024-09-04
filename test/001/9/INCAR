@@ -1,0 +1,59 @@
+ Name of system
+   SYSTEM    =     PbTiO3
+
+ Start parameter
+   ISTART    =     1
+   INIWAV    =     1
+   ICHARG    =     2
+
+ Write flags
+   NWRITE    =     2
+   LWAVE     =     T
+   LCHARG    =     F
+    LASPH=.TRUE.
+ #LWANNIER90=.TRUE.
+ Parallelization
+   NPAR      =     4
+   LPLANE    =     T
+   LSCALU    =     F
+   LSCALAPACK =    F
+
+ Electronic Relaxation 1
+   ENCUT     =     600.00  eV
+   EDIFF     =     1.0E-06  eV
+   PREC      =     Accurate
+   NELM      =     90
+   NELMIN    =     4
+   AMIN      =     0.01
+
+ Electronic Relaxation 2
+   ALGO      =     Normal
+   LDIAG     =     T
+   LREAL     =     .FALSE.
+
+ Ionic Relaxation
+   NSW       =     150
+   IBRION    =     2
+   ISIF      =     3
+   EDIFFG    =     -0.01
+   POTIM     =     0.2
+   ISYM      =     2
+   IWAVPR    =     1
+   LCORR     =     T
+ 
+ DOS related values
+   ISMEAR    =     0
+   SIGMA     =     0.025
+   NEDOS     =     8000
+ #  NBANDS    =     96
+
+#Exchange-correlation functional
+#  GGA       =     PS
+    LORBIT = 11 
+   METAGGA = SCAN
+   LASPH = T
+ADDGRID = T
+   KSPACING=0.25
+
+
+
